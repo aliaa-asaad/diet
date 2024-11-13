@@ -53,9 +53,11 @@ class _CustomNavBarState extends State<CustomNavBar> {
           selectedLabelStyle: const TextStyle(
             color: AppColors.primaryColor,
           ),
+          currentIndex: _selectedIndex,
           unselectedLabelStyle: const TextStyle(
             color: AppColors.grey,
           ),
+          
           showSelectedLabels: true,
           showUnselectedLabels: true,
           items: List<BottomNavigationBarItem>.generate(

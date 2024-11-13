@@ -20,11 +20,11 @@ class RegisterButton extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.message),
-              backgroundColor: Colors.red,
+              
             ),
           );
         }
-        else if (state is LoadedState) {
+         if (state is LoadedState) {
           Navigator.pushNamed(context, AppRoutes.navBar);
         }
       },

@@ -14,7 +14,7 @@ class TotalLoadedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
+     
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -22,23 +22,30 @@ class TotalLoadedView extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          const VoucherFormField(),
-          const SizedBox(
-            height: 24,
-          ),
-          const ChooseDeliveryMethod(),
-          const SizedBox(
-            height: 24,
-          ),
-          const SelectBranchField(),
-          const SizedBox(
-            height: 24,
-          ),
-          const OrderSummary(),
-          const SizedBox(
-            height: 32,
-          ),
-          const TotalButtons()
+          Padding(
+           padding: const EdgeInsets.all(24),
+            child: Column(
+              children: [
+                const VoucherFormField(),
+                const SizedBox(
+                  height: 24,
+                ),
+                const ChooseDeliveryMethod(),
+                const SizedBox(
+                  height: 24,
+                ),
+                const SelectBranchField(),
+                const SizedBox(
+                  height: 24,
+                ),
+                const OrderSummary(),
+                const SizedBox(
+                  height: 32,
+                ),
+                const TotalButtons(),
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -18,6 +18,7 @@ class CustomAppBar extends StatelessWidget {
           child: Image.asset(
             AppImages.logo2,
             height: 90,
+            width: MediaQuery.of(context).size.width ,
           ),
         )
       ],

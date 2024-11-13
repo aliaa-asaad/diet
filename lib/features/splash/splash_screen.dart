@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:diet/core/handlers/shared_handler.dart';
 import 'package:diet/core/routing/diet_routes.dart';
 import 'package:diet/core/theme/assets/images.dart';
 import 'package:diet/core/theme/colors.dart';
@@ -15,8 +16,12 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.login);
+    Timer(const Duration(seconds: 3), () async {
+      if (await SharedHandler.instance!
+          .getData(key: SharedKeys().isLogin, valueType: ValueType.bool))
+        {Navigator.pushReplacementNamed(context, AppRoutes.navBar);}
+      else
+       { Navigator.pushReplacementNamed(context, AppRoutes.login);}
     });
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (width == 150) {

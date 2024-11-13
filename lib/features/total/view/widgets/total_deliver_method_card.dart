@@ -28,15 +28,16 @@ class TotalDeliveryMethodCard extends StatelessWidget {
         child: Container(
           height: 52,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12), color: background),
+              border: border,
+              borderRadius: BorderRadius.circular(12),
+              color: background),
           child: Stack(
             children: [
               Container(
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.primaryColor,
-                  border: border,
-                  borderRadius: const BorderRadius.horizontal(
+                  borderRadius: BorderRadius.horizontal(
                     left: Radius.circular(8),
                   ),
                 ),

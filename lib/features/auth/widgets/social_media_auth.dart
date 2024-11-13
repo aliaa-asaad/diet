@@ -12,8 +12,10 @@ class SocialMediaAuth extends StatelessWidget {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        FacebookButton(),
-        GoogleButton(),
+        Expanded(child:FacebookButton())
+        ,
+        const SizedBox(width: 16),
+       Expanded(child: GoogleButton()),
       ],
     );
   }

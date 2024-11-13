@@ -1,3 +1,4 @@
+import 'package:diet/core/configurations/validations.dart';
 import 'package:diet/core/shared/widgets/custom_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,11 +19,17 @@ class LoginFormFields extends StatelessWidget {
           CustomFormField(
             controller: cubit.emailController,
             hintText: 'Email Address',
+            validator: Validations.validateEmail,
+            textInputType: TextInputType.emailAddress,
+
           ),
           const SizedBox(height: 16),
           CustomFormField(
             controller: cubit.passwordController,
             hintText: 'Password',
+            validator: Validations.validatePassword,
+            textInputType: TextInputType.visiblePassword,
+            isPassword: true,
           ),
         ],
       ),

@@ -19,5 +19,6 @@ abstract class AppIcons {
   static const String manage = 'assets/svg/manage.svg';
   static const String setting = 'assets/svg/setting.svg';
   static const String addresses = 'assets/svg/addresses.svg';
+  static const String voucher = 'assets/svg/voucher.svg';
  
 }

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:diet/core/handlers/shared_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:diet/core/configurations/app_events.dart';
@@ -31,6 +32,7 @@ class LoginBloc extends Bloc<AppEvent, AppState> {
     emit(LoadingState());
     try {
       await _postLoginParams();
+      await SharedHandler.instance!.setData(SharedKeys().isLogin, value: true);
       emit(LoadedState('Login successful'));
     } catch (e) {
       emit(ErrorState(e.toString()));

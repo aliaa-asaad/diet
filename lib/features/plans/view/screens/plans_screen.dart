@@ -18,16 +18,20 @@ class PlansScreen extends StatelessWidget {
         elevation: 0,
         bottom: const PreferredSize(
             preferredSize: Size.fromHeight(0), child: Divider()),
-        title: const Text(
-          'Plans',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+        title: const Padding(
+          padding: EdgeInsetsDirectional.only(end: 24),
+          child: Text(
+            'Plans',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         actions: [
           IconButton(
+            padding: const EdgeInsetsDirectional.only(end: 24),
             icon: SvgPicture.asset(AppIcons.search),
             onPressed: () {},
           ),

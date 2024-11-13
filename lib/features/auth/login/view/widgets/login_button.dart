@@ -24,7 +24,8 @@ class LoginButton extends StatelessWidget {
             ),
           );
         }
-        else if (state is LoadedState) {
+         if (state is LoadedState) {
+          
           Navigator.pushNamedAndRemoveUntil(context, AppRoutes.navBar,
               (route) => false);
         }

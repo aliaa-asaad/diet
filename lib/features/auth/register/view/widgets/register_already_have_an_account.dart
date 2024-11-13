@@ -1,4 +1,3 @@
-import 'package:diet/core/routing/diet_routes.dart';
 import 'package:diet/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,7 @@ class RegisterAlreadyHaveAnAccount extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, AppRoutes.register);
+            Navigator.pop(context);
           },
           child: const Text(
             "Login",
